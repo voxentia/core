@@ -1,56 +1,31 @@
 # Voxentia Core
 
+[![PyPI version](https://badge.fury.io/py/voxentia-core.svg)](https://pypi.org/project/voxentia-core/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
+[![Python 3.10+](https://img.shields.io/badge/python-3.10+-blue.svg)](https://www.python.org/downloads/)
 
-Core framework for building intelligent, modular AI agents.
+Modular framework for building intelligent, extensible AI agents.
 
-## 🎯 Mission
+## ✨ Features
 
-Voxentia Core provides the foundation for creating AI agents that are:
-- **Modular**: Plug-and-play tools and memory systems
-- **Extensible**: Easy to add new capabilities
-- **Testable**: Built with testing in mind
-- **Privacy-first**: Your data, your control
+- **Modular architecture**: Plug-and-play tools, memory systems, and LLM providers
+- **Type-safe**: Full type hints with mypy support
+- **Tested**: pytest-ready with example tests
+- **Extensible**: Easy to create custom agents and tools
+- **Privacy-first**: Your data, your control — no telemetry
 
-## 📦 Architecture
+## 🚀 Installation
 
+```bash
+# Basic installation
+pip install voxentia-core
+
+# With development tools
+pip install "voxentia-core[dev]"
+
+# With LLM support
+pip install "voxentia-core[llm]"
+
+# With local LLM support (Ollama)
+pip install "voxentia-core[local-llm]"
 ```
-core/
-├── agent/ # Agent base classes and implementations
-├── tools/ # Reusable tool interfaces and implementations
-├── memory/ # Memory management and context handling
-└── utils/ # Shared utilities
-```
-
-## 🚀 Quick Start
-
-```python
-from src.agent.base_agent import BaseAgent
-
-class MyAgent(BaseAgent):
-    def run(self, user_input: str, **kwargs) -> str:
-        # Your agent logic here
-        return f"Echo: {user_input}"
-
-agent = MyAgent(name="EchoBot")
-response = agent.run("Hello!")
-print(response)  # Echo: Hello!
-```
-
-🛠️ Installation
-
-```
-# Clone the repository
-git clone https://github.com/voxentia/core.git
-cd core
-
-# Install dependencies (optional)
-pip install -r requirements.txt
-
-# Run tests
-pytest tests/
-```
-
-📄 License
-
-MIT License — see LICENSE for details.

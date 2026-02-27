@@ -1,0 +1,73 @@
+[build-system]
+requires = ["hatchling>=1.21.0"]
+build-backend = "hatchling.build"
+
+[project]
+name = "voxentia-core"
+version = "0.1.0"
+description = "Modular framework for building intelligent AI agents"
+readme = "README.md"
+requires-python = ">=3.10"
+license = {text = "MIT"}
+authors = [
+    {name = "Your Name", email = "voxentia.lab@gmail.com"}
+]
+keywords = ["ai", "agents", "llm", "framework", "modular"]
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Topic :: Software Development :: Libraries :: Python Modules",
+]
+
+dependencies = [
+    "pydantic>=2.0",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=7.0",
+    "pytest-cov>=4.0",
+    "mypy>=1.0",
+    "ruff>=0.1",
+    "build>=1.0",
+    "twine>=4.0",
+]
+llm = [
+    "openai>=1.0",
+    "anthropic>=0.18",
+]
+local-llm = [
+    "ollama>=0.1",
+]
+fastapi = [
+    "fastapi>=0.100",
+    "uvicorn>=0.24",
+]
+
+[project.urls]
+Homepage = "https://voxentia.github.io/website/"
+Repository = "https://github.com/voxentia/core"
+Documentation = "https://github.com/voxentia/core#readme"
+"Bug Tracker" = "https://github.com/voxentia/core/issues"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/voxentia"]
+
+[tool.ruff]
+line-length = 100
+target-version = "py310"
+
+[tool.ruff.lint]
+select = ["E", "F", "W", "I", "N", "UP", "ANN"]
+ignore = ["ANN101", "ANN102"]
+
+[tool.mypy]
+python_version = "3.10"
+warn_return_any = true
+warn_unused_configs = true
+disallow_untyped_defs = false 
