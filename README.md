@@ -1,22 +1,15 @@
-# core
+# Voxentia Core
 
-Voxentia is building a family of AI agents designed to enhance learning, productivity, and creativity.
+[![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
 
-🎯 Our Mission:
-We believe AI should be practical, accessible, and adaptable to your unique needs. That's why we're creating intelligent agents that go beyond chatbots — they learn, adapt, and truly assist you.
+Core framework for building intelligent, modular AI agents.
 
-🚀 What We're Building:
-• AI agents for learning (Python, Java, certifications)
-• Productivity assistants (presentations, planning, research)
-• Creative tools (content creation, ideation)
+## 🎯 Mission
 
-💡 Our Approach:
-- Modular architecture for flexibility
-- Open-source where possible
-- Privacy-first design
-- User-centric development
+Voxentia Core provides the foundation for creating AI agents that are:
+- **Modular**: Plug-and-play tools and memory systems
+- **Extensible**: Easy to add new capabilities
+- **Testable**: Built with testing in mind
+- **Privacy-first**: Your data, your control
 
-Currently in active development. Follow us for updates!
-
-🔗 github.com/voxentia
-📧 voxentia.lab@gmail.com
+## 📦 Architecture
